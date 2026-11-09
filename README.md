@@ -1,9 +1,30 @@
-# JS-Engine-V8
+# JavaScript Engine V8 · Apuntes
+
+**Notas ilustradas sobre el motor de JavaScript, pila de ejecución y entorno del navegador.**
+
+[![Repositorio](https://img.shields.io/badge/GitHub-GermanBartoli-181717?logo=github)](https://github.com/GermanBartoli/JS-Engine-V8)
+
+[Empezar](#primeros-pasos) · [Mapa del repositorio](#mapa-del-repositorio) · [Autoría](#autoría-de-esta-documentación)
+
+![Guía visual: JavaScript Engine V8 · Apuntes](docs/readme/guia.svg)
+
+*Esquema de orientación; no representa una captura de la aplicación.*
+
+## Primeros pasos
+
+1. Seguí el orden de los apuntes originales conservados debajo.
+2. Usá las ilustraciones de `imgs/` para relacionar el código con la pila y el runtime.
+3. Probá pequeños ejemplos en la consola del navegador y compará el orden de ejecución. No hay un paquete ni un build que instalar.
+
+## Entorno de aprendizaje
+
+Este repositorio conserva ejercicios y versiones de su etapa de estudio. Revisá los archivos de proyecto para preparar el SDK, runtime o servidor correspondiente; esta actualización del README no migra dependencias ni acredita una ejecución reciente de todos los ejemplos.
+
+## Referencia y detalles
+
 https://platzi.com/cursos/javascript-navegador/
 
-
-
-# Curso de JavaScript Engine (V8) y el Navegador
+## Curso de JavaScript Engine (V8) y el Navegador
 
 ## 1. Introducción al curso
 ### 1. Requisitos antes de empezar
@@ -26,7 +47,7 @@ Su fundador(programador) de js es **Breandan Eich**, pero antes de JavaScript ge
 6. V8 2008. Es un engine de JS que corre en el navegador
 7. Node.js 2009 JS BackEnd
 8. Frameworks 2010
-9. ES6 2015 
+9. ES6 2015
 
 **ECMA**
 >Es una especificación estandarizada por **Ecma International**. Fue creado para estandarizar JavaScript y ayudar a fomentar múltiples implementaciones independientes.
@@ -73,11 +94,10 @@ NodeJS es el JavaScript en el BackEnd
 - El hoisting a veces funciona pero no tenemos control de las variables que se van a cambiar
 - Si llamamos a una constante (const) antes de inicializar retorna un error de tipo: Uncaught ReferenceError, que corresponde a variables que son referenciadas pero no pudieron ser capturadas
 
-
 + :link: [ECMAScript parsing infrastructure for multipurpose analysis](https://esprima.org/)
 + :link: [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
 + Parsers y el Abstract Syntax Tree
-    * El JS Engine recibe el código fuente y lo procesa de la siguiente manera: 
+    * El JS Engine recibe el código fuente y lo procesa de la siguiente manera:
         - El **parser** descompone y crea tokens que integran el **AST**.
         - Se compila a **bytecode** y se ejecuta.
         - Lo que se pueda se **optimiza a machine code** y se reemplaza el código base.
@@ -127,7 +147,7 @@ Los objetos también pueden tener más objetos dentro. En ese caso, dentro de la
 
 ![Stack overflow](imgs/stack_overflow_01.png)
 
-Se tiene el _Call STACK_, la lista de tareas, en su base esta el _GLOBAL OBJECT_.  
+Se tiene el _Call STACK_, la lista de tareas, en su base esta el _GLOBAL OBJECT_.
 Todo el codigo se va agregando en la pila, y el global object, en su base va evacuando uno a uno
 puede ocurrir que una funcion desborde de tareas la pila.
 
@@ -162,75 +182,17 @@ setTimeout(()=>{
 
 ### 13. Recapitulación
 
-
-
 ![Historia JavaScript Engine (V8) y el Navegador](imgs/js_engine_01.jpg)
 ![Profundizando JavaScript Engine (V8) y el Navegador](imgs/js_engine_02.jpg)
 ![Elementos JavaScript Engine (V8) y el Navegador](imgs/js_engine_03.jpg)
 ![Asincronía JavaScript Engine (V8) y el Navegador](imgs/js_engine_04.jpg)
 
+## Mapa del repositorio
 
+La rama contiene documentación. No hay una aplicación para instalar.
 
+## Autoría de esta documentación
 
+Repositorio mantenido por [Germán Bartoli](https://github.com/GermanBartoli). Guía revisada y actualizada con **Codex**, coautor de esta actualización documental. Los autores, colaboradores, licencias y recursos de terceros conservan sus créditos originales.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Los commits de esta revisión incluyen `Co-authored-by: Codex <noreply@openai.com>`; esta atribución no modifica la autoría del historial anterior.
